@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to my Homepage</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(90deg, PINK, black);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      font-family: 'Montserrat', sans-serif;
+      cursor: default;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: bisque;
+    }
+    /* Hero */
+    .hero {
+      background: url('rsc/494828398_1230169501934860_2437542350640099481_n.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+    .hero button {
+      background-color: black;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px burlywood;
+      cursor: pointer;
+      color: white;
+      font-weight: 600;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      align-self: center;
+    }
+    .hero button:hover {
+      background-color: beige;
+      box-shadow: 0 7px 20px beige;
+    }
+    /* Section */
+    section.features {
+      background: white;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2.5rem;
+      color: #1f2937;
+    }
+    section.features article {
+      background: #f3f4f6;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    section.features article:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: beige;
+      margin-bottom: 1rem;
+    }
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .feature-text {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+    /* Footer */
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    footer a {
+      color: bisque;
+      font-weight: 600;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: bisque;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      header {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+      nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Happy Travelers!</div>
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" role="banner">
+    <h1>WELCOME TRAVELERS!</h1>
+    <button onclick="alert('Get Started clicked!')">Let's Go!</button>
+  </section>
+
+  <section class="features" id="features" aria-label="Features">
+    <article>
+      <div class="feature-icon" aria-hidden="true">🚀</div>
+      <h2 class="feature-title">Fast Performance</h2>
+      <p class="feature-text">Optimized for speed so your users get what they want, instantly and smooth.</p>
+    </article>
+    <article>
+      <div class="feature-icon" aria-hidden="true">🔒</div>
+      <h2 class="feature-title">Secure Platform</h2>
+      <p class="feature-text">We prioritize security and privacy to keep your data safe and sound.</p>
+    </article>
+    <article>
+      <div class="feature-icon" aria-hidden="true">🎨</div>
+      <h2 class="feature-title">Creative Design</h2>
+      <p class="feature-text">Beautiful, intuitive layouts that delight users and boost engagement.</p>
+    </article>
+    <article>
+      <div class="feature-icon" aria-hidden="true">⚙️</div>
+      <h2 class="feature-title">Easy Customization</h2>
+      <p class="feature-text">Flexible options to tailor everything exactly the way you want it.</p>
+    </article>
+  </section>
+
+  <footer>
+    &copy; 2025 Adventurous Milestone.
+    <br />
+    <a href="#Home" aria-label="Home section">Home</a> | 
+    <a href="#about" aria-label="About section">About</a> | 
+    <a href="#Services" aria-label="Services section">Services</a> |
+    <a href="#contact" aria-label="Contact section">Contact</a>
+  </footer>
+</body>
+</html>
